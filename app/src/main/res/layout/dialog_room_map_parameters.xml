@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dialog_background"
+    >
+
+    <TextView
+        android:id="@+id/dialog_room_parameters_title"
+        android:text="@string/dialog_parameters_class_map_title"
+        style="@style/DialogTitle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dialog_room_parameters_title"
+        android:layout_above="@+id/dialog_room_parameters_layout_button_box"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/parameter_layout_building"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="1.0"
+                >
+                <TextView
+                    android:text="@string/map_param_label_building"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    style="@style/ListText"/>
+
+                <Spinner
+                    android:id="@+id/spinner_building"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    style="@style/DefaultSpinner"
+                    />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/param_layout_first_divider"
+                android:layout_below="@+id/parameter_layout_building"
+                android:background="@drawable/default_list_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                />
+
+            <LinearLayout
+                android:id="@+id/param_layout_time"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/param_layout_first_divider"
+                android:weightSum="1.0"
+                >
+                <TextView
+                    android:text="@string/map_param_label_time"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    style="@style/ListText"/>
+
+                <Button
+                    android:id="@+id/btn_time"
+                    android:layout_weight="0.5"
+                    style="@style/ListButton"/>
+                    />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/param_layout_second_divider"
+                android:layout_below="@+id/param_layout_time"
+                android:background="@drawable/default_list_divider"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                />
+
+            <LinearLayout
+                android:id="@+id/param_layout_date"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/param_layout_second_divider"
+                android:weightSum="1.0"
+                >
+                <TextView
+                    android:text="@string/map_param_label_date"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    style="@style/ListText"/>
+
+                <Button
+                    android:id="@+id/btn_date"
+                    android:layout_weight="0.5"
+                    style="@style/ListButton"/>
+            </LinearLayout>
+
+            <View
+                android:layout_below="@+id/param_layout_date"
+                android:background="@drawable/default_list_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_room_parameters_layout_button_box"
+        style="@style/DialogLayoutButton"
+        >
+        <Button
+            android:id="@+id/dialog_room_parameters_btn_cancel"
+            android:text="@string/btn_cancel"
+            android:layout_weight="0.5"
+            style="@style/DialogButton"/>
+
+        <Button
+            android:id="@+id/dialog_room_parameters_btn_ok"
+            android:text="@string/btn_ok"
+            android:layout_weight="0.5"
+            style="@style/DialogButton"/>
+    </LinearLayout>
+
+</RelativeLayout>

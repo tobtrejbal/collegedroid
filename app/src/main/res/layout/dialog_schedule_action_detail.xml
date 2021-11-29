@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_background"
+    >
+
+    <LinearLayout
+        android:id="@+id/schedule_action_detail_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/schedule_action_detail_title"
+            style="@style/DialogTitle"/>
+
+        <EditText
+            android:id="@+id/schedule_action_detail_title_edit"
+            android:singleLine="true"
+            style="@style/DialogTitle"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/schedule_action_detail_layout_title"
+        android:layout_above="@+id/schedule_action_detail_layout_button_box"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+             <LinearLayout
+                 android:id="@+id/schedule_action_detail_name"
+                 android:layout_alignParentTop="true"
+                 style="@style/ScheduleDetailLayout"
+                 >
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_label_name"
+                     android:layout_weight="0.5"
+                     android:gravity="right"
+                     android:text="@string/label_name"
+                     style="@style/ListText"/>
+
+                 <View
+                     style="@style/ListVerticalDivider"/>
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_txt_name"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+                 <EditText
+                     android:id="@+id/schedule_action_detail_txt_name_edit"
+                     android:singleLine="true"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+             </LinearLayout>
+
+             <View
+                 android:id="@+id/schedule_action_detail_divider_1"
+                 android:layout_below="@+id/schedule_action_detail_name"
+                 android:background="@drawable/default_list_divider"
+                 android:layout_width="match_parent"
+                 android:layout_height="1px"
+                 />
+
+             <LinearLayout
+                 android:id="@+id/schedule_action_detail_teacher"
+                 android:layout_below="@+id/schedule_action_detail_divider_1"
+                 style="@style/ScheduleDetailLayout"
+                 >
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_label_teacher"
+                     android:layout_weight="0.5"
+                     android:gravity="right"
+                     android:text="@string/label_teacher"
+                     style="@style/ListText"/>
+
+                 <View
+                     style="@style/ListVerticalDivider"/>
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_txt_teacher"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+                 <EditText
+                     android:id="@+id/schedule_action_detail_txt_teacher_edit"
+                     android:singleLine="true"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+             </LinearLayout>
+
+             <View
+                 android:id="@+id/schedule_action_detail_divider_2"
+                 android:layout_below="@+id/schedule_action_detail_teacher"
+                 android:background="@drawable/default_list_divider"
+                 android:layout_width="match_parent"
+                 android:layout_height="1px"
+                 />
+
+             <LinearLayout
+                 android:id="@+id/scheduleAction_detail_place"
+                 android:layout_below="@+id/schedule_action_detail_divider_2"
+                 style="@style/ScheduleDetailLayout"
+                 >
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_label_place"
+                     android:layout_weight="0.5"
+                     android:gravity="right"
+                     android:text="@string/label_place"
+                     style="@style/ListText"/>
+
+                 <View
+                     style="@style/ListVerticalDivider"/>
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_txt_place"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+                 <EditText
+                     android:id="@+id/schedule_action_detail_txt_place_edit"
+                     android:singleLine="true"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+             </LinearLayout>
+
+             <View
+                 android:id="@+id/schedule_action_detail_divider_3"
+                 android:layout_below="@+id/scheduleAction_detail_place"
+                 android:background="@drawable/default_list_divider"
+                 android:layout_width="match_parent"
+                 android:layout_height="1px"
+                 />
+
+             <LinearLayout
+                 android:id="@+id/scheduleAction_detail_capacity"
+                 android:layout_below="@+id/schedule_action_detail_divider_3"
+                 style="@style/ScheduleDetailLayout"
+                 >
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_label_capacity"
+                     android:layout_weight="0.5"
+                     android:gravity="right"
+                     android:text="@string/label_capacity"
+                     style="@style/ListText"/>
+
+                 <View
+                     style="@style/ListVerticalDivider"/>
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_txt_capacity"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+                 <EditText
+                     android:id="@+id/schedule_action_detail_txt_capacity_edit"
+                     android:singleLine="true"
+                     android:inputType="number"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+             </LinearLayout>
+
+             <View
+                 android:id="@+id/schedule_action_detail_divider_4"
+                 android:layout_below="@+id/scheduleAction_detail_capacity"
+                 android:background="@drawable/default_list_divider"
+                 android:layout_width="match_parent"
+                 android:layout_height="1px"
+                 />
+
+             <LinearLayout
+                 android:id="@+id/scheduleAction_detail_occupancy"
+                 android:layout_below="@+id/schedule_action_detail_divider_4"
+                 style="@style/ScheduleDetailLayout"
+                 >
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_label_occupancy"
+                     android:layout_weight="0.5"
+                     android:gravity="right"
+                     android:text="@string/label_occupancy"
+                     style="@style/ListText"/>
+
+                 <View
+                     style="@style/ListVerticalDivider"/>
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_txt_occupancy"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+                 <EditText
+                     android:id="@+id/schedule_action_detail_txt_occupancy_edit"
+                     android:singleLine="true"
+                     android:inputType="number"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+             </LinearLayout>
+
+             <View
+                 android:id="@+id/schedule_action_detail_divider_5"
+                 android:layout_below="@+id/scheduleAction_detail_occupancy"
+                 android:background="@drawable/default_list_divider"
+                 android:layout_width="match_parent"
+                 android:layout_height="1px"
+                 />
+
+             <LinearLayout
+                 android:id="@+id/scheduleAction_detail_action_type"
+                 android:layout_below="@+id/schedule_action_detail_divider_5"
+                 style="@style/ScheduleDetailLayout"
+                 >
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_label_action_type"
+                     android:layout_weight="0.5"
+                     android:gravity="right"
+                     android:text="@string/label_action_type"
+                     style="@style/ListText"/>
+
+                 <View
+                     style="@style/ListVerticalDivider"/>
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_txt_action_type"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+                 <Spinner
+                     android:id="@+id/schedule_action_detail_action_type_spinner"
+                     android:layout_weight="0.5"
+                     style="@style/ListSpinner"/>
+
+             </LinearLayout>
+
+             <View
+                 android:id="@+id/schedule_action_detail_divider_6"
+                 android:layout_below="@+id/scheduleAction_detail_action_type"
+                 android:background="@drawable/default_list_divider"
+                 android:layout_width="match_parent"
+                 android:layout_height="1px"
+                 />
+
+             <LinearLayout
+                 android:id="@+id/schedule_action_detail_start_time"
+                 android:layout_below="@+id/schedule_action_detail_divider_6"
+                 style="@style/ScheduleDetailLayout"
+                 >
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_label_start_time"
+                     android:layout_weight="0.5"
+                     android:gravity="right"
+                     android:text="@string/label_start_time"
+                     style="@style/ListText"/>
+
+                 <View
+                     style="@style/ListVerticalDivider"/>
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_txt_start_time"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+                 <Button
+                     android:id="@+id/schedule_action_detail_start_time_button"
+                     android:layout_weight="0.5"
+                     style="@style/ListButton"/>
+
+             </LinearLayout>
+
+             <View
+                 android:id="@+id/schedule_action_detail_divider_7"
+                 android:layout_below="@+id/schedule_action_detail_start_time"
+                 android:background="@drawable/default_list_divider"
+                 android:layout_width="match_parent"
+                 android:layout_height="1px"
+                 />
+
+             <LinearLayout
+                 android:id="@+id/schedule_action_detail_end_time"
+                 android:layout_below="@+id/schedule_action_detail_divider_7"
+                 style="@style/ScheduleDetailLayout"
+                 >
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_label_end_time"
+                     android:layout_weight="0.5"
+                     android:gravity="right"
+                     android:text="@string/label_end_time"
+                     style="@style/ListText"/>
+
+                 <View
+                     style="@style/ListVerticalDivider"/>
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_txt_end_time"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+                 <Button
+                     android:id="@+id/schedule_action_detail_end_time_button"
+                     android:singleLine="true"
+                     android:layout_weight="0.5"
+                     style="@style/ListButton"/>
+
+             </LinearLayout>
+
+             <View
+                 android:id="@+id/schedule_action_detail_divider_8"
+                 android:layout_below="@+id/schedule_action_detail_end_time"
+                 android:background="@drawable/default_list_divider"
+                 android:layout_width="match_parent"
+                 android:layout_height="1px"
+                 />
+
+             <LinearLayout
+                 android:id="@+id/schedule_action_detail_day"
+                 android:layout_below="@+id/schedule_action_detail_divider_8"
+                 style="@style/ScheduleDetailLayout"
+                 >
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_label_day"
+                     android:layout_weight="0.5"
+                     android:gravity="right"
+                     android:text="@string/label_day"
+                     style="@style/ListText"/>
+
+                 <View
+                     style="@style/ListVerticalDivider"/>
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_txt_day"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+                 <Spinner
+                     android:id="@+id/schedule_action_detail_spinner_day"
+                     android:singleLine="true"
+                     android:layout_weight="0.5"
+                     style="@style/ListSpinner"/>
+
+             </LinearLayout>
+
+             <View
+                 android:id="@+id/schedule_action_detail_divider_9"
+                 android:layout_below="@+id/schedule_action_detail_day"
+                 android:background="@drawable/default_list_divider"
+                 android:layout_width="match_parent"
+                 android:layout_height="1px"
+                 />
+
+             <LinearLayout
+                 android:id="@+id/schedule_action_detail_week_type"
+                 android:layout_below="@+id/schedule_action_detail_divider_9"
+                 style="@style/ScheduleDetailLayout"
+                 >
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_label_week_type"
+                     android:layout_weight="0.5"
+                     android:gravity="right"
+                     android:text="@string/label_name"
+                     style="@style/ListText"/>
+
+                 <View
+                     style="@style/ListVerticalDivider"/>
+
+                 <TextView
+                     android:id="@+id/schedule_action_detail_txt_week_type"
+                     android:layout_weight="0.5"
+                     style="@style/ListText"/>
+
+                 <Spinner
+                     android:id="@+id/schedule_action_detail_spinner_week_type"
+                     android:singleLine="true"
+                     android:layout_weight="0.5"
+                     style="@style/ListSpinner"/>
+
+             </LinearLayout>
+
+         </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/schedule_action_detail_layout_button_box"
+            style="@style/DialogLayoutButton"
+            >
+
+            <Button
+                android:id="@+id/schedule_action_detail_btn_left"
+                android:layout_weight="0.5"
+                style="@style/DialogButton"/>
+
+            <Button
+                android:id="@+id/schedule_action_detail_btn_right"
+                android:layout_weight="0.5"
+                style="@style/DialogButton"/>
+        </LinearLayout>
+
+</RelativeLayout>

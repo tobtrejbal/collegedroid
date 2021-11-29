@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/dialog_background"
+    >
+
+<TextView
+    android:id="@+id/room_detail_title"
+    style="@style/DialogTitle"/>
+
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/room_detail_list_schedule_actions"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/room_detail_title"
+    android:layout_above="@+id/room_detail_layout_button_box"
+    />
+
+<LinearLayout
+    android:id="@+id/room_detail_layout_button_box"
+    style="@style/DialogLayoutButton"
+    >
+    <Button
+        android:id="@+id/room_detail_btn_navigate"
+        android:text="@string/btn_navigate"
+        android:layout_weight="0.5"
+        style="@style/DialogButton"/>
+
+    <Button
+        android:id="@+id/room_detail_btn_ok"
+        android:text="@string/btn_ok"
+        android:layout_weight="0.5"
+        style="@style/DialogButton"/>
+</LinearLayout>
+
+</RelativeLayout>

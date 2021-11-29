@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMenu"
+        android:orientation="horizontal"
+        style="@style/FragmentMenuLayout">
+
+        <Spinner
+            android:id="@+id/spinner_floor"
+            android:layout_weight="0.3"
+            style="@style/FragmentMenuSpinner"
+            />
+
+        <Button
+            android:id="@+id/btn_parameters"
+            android:layout_weight="0.6"
+            style="@style/FragmentMenuButton"
+            />
+
+        <Button
+            android:id="@+id/btn_clear_nav"
+            android:text="X"
+            android:layout_weight="0.1"
+            style="@style/FragmentMenuButton"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/verticalScroll"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarStyle="insideOverlay"
+        android:fillViewport="true"
+        android:layout_below="@id/linearLayoutMenu">
+
+        <uk.co.senab.photoview.PhotoView
+            android:id="@+id/planView"
+            android:scaleType="fitStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
+</RelativeLayout>

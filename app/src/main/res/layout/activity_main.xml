@@ -1,0 +1,41 @@
+<tobous.collegedroid.gui.mainScreen.navdrawer.HackyDrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <!-- The main content view -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <tobous.collegedroid.gui.mainScreen.slidingtab.SlidingTabLayout
+            android:id="@+id/main_sliding_tab"
+            style="@style/MainSlidingTabLayoutMenu"
+            />
+
+        <tobous.collegedroid.gui.mainScreen.viewpager.HackyViewPager
+            android:id="@+id/main_view_pager"
+            android:layout_below="@+id/main_sliding_tab"
+            style="@style/MainViewPagerContent"
+            />
+
+    </RelativeLayout>
+
+    <!-- The navigation drawer -->
+
+    <RelativeLayout
+        android:id="@+id/main_nav_drawer_layout"
+        style="@style/MainRelativeLayoutNavDrawerContainer"
+
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_nav_drawer_list_view"
+            style="@style/MainListViewNavDrawer"
+            />
+
+    </RelativeLayout>
+
+</tobous.collegedroid.gui.mainScreen.navdrawer.HackyDrawerLayout>

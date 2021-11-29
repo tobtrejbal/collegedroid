@@ -1,0 +1,76 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMenu"
+        android:orientation="horizontal"
+        style="@style/FragmentMenuLayout">
+
+        <Button
+            android:id="@+id/button_center_position"
+            android:text="@string/btn_center_position"
+            android:layout_weight="0.5"
+            style="@style/FragmentMenuButton"
+            />
+
+        <Button
+            android:id="@+id/button_center_school_city"
+            android:text="@string/btn_center_school_city"
+            android:layout_weight="0.5"
+            style="@style/FragmentMenuButton"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+    android:id="@+id/map_layout_google_map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/linearLayoutMenu"
+    />
+
+    <RelativeLayout
+        android:id="@+id/map_layout_detail"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <ImageView
+            android:id="@+id/map_fragment_img_building"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitStart"
+            />
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/map_fragment_img_building">
+            <TextView
+                android:id="@+id/map_fragment_txt_building"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_horizontal"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/primary_text_color_invert"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/map_fragment_btn_nav"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="@string/btn_navigate"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                style="@style/DefaultButton"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

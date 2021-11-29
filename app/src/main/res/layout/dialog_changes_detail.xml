@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_background"
+    >
+
+    <TextView
+        android:id="@+id/navigate_detail_title"
+        android:text="Detail zmeny"
+        style="@style/DialogTitle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/navigate_detail_title"
+        android:layout_above="@+id/navigate_layout_button_box"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/changes_layout_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:weightSum="1.0"
+                    >
+                    <TextView
+                        android:text="Predmet"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        style="@style/ListText"/>
+
+                    <TextView
+                        android:id="@+id/changes_name"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        style="@style/ListText"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_below="@+id/changes_layout_name"
+                    android:background="@drawable/default_list_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    />
+                <LinearLayout
+                    android:layout_below="@+id/changes_layout_name"
+                    android:id="@+id/changes_layout_start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:weightSum="1.0"
+                    >
+                    <TextView
+                        android:text="Datum od:"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        style="@style/ListText"/>
+
+                    <TextView
+                        android:id="@+id/changes_start_date"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        style="@style/ListText"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_below="@+id/changes_layout_start_date"
+                    android:background="@drawable/default_list_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    />
+                <LinearLayout
+                    android:layout_below="@+id/changes_layout_start_date"
+                    android:id="@+id/changes_layout_end_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:weightSum="1.0"
+                    >
+                    <TextView
+                        android:text="Datum do:"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        style="@style/ListText"/>
+
+                    <TextView
+                        android:id="@+id/changes_end_date"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        style="@style/ListText"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_below="@+id/changes_layout_end_date"
+                    android:background="@drawable/default_list_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    />
+                <LinearLayout
+                    android:layout_below="@+id/changes_layout_end_date"
+                    android:id="@+id/changes_layout_author"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:weightSum="1.0"
+                    >
+                    <TextView
+                        android:text="Autor:"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        style="@style/ListText"/>
+
+                    <TextView
+                        android:id="@+id/changes_author"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        style="@style/ListText"/>
+                </LinearLayout>
+                <View
+                    android:layout_below="@+id/changes_layout_author"
+                    android:background="@drawable/default_list_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    />
+
+                <LinearLayout
+                    android:layout_below="@+id/changes_layout_author"
+                    android:id="@+id/changes_layout_label_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:weightSum="1.0"
+                    >
+                    <TextView
+                        android:text="Popis:"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        style="@style/ListText"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/changes_layout_label_description"
+                    android:id="@+id/changes_layout_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1.0"
+                    >
+                    <TextView
+                        android:id="@+id/changes_decription"
+                        android:text="test"
+                        android:gravity="left"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        android:paddingBottom="20dp"
+                        style="@style/ListText"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_below="@+id/changes_layout_label_description"
+                    android:background="@drawable/default_list_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navigate_layout_button_box"
+        style="@style/DialogLayoutButton"
+        >
+        <Button
+            android:id="@+id/changes_detail_btn_ok"
+            android:text="@string/btn_ok"
+            android:layout_weight="1"
+
+
+            style="@style/DialogButton"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</RelativeLayout>

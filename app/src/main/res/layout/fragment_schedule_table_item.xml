@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<tobous.collegedroid.gui.mainScreen.fragment.schedule.CellRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_schedule_table_item"
+    android:layout_width="0dp"
+    android:layout_height="0dp">
+    <TextView
+        android:id="@+id/fragment_schedule_table_item_txt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</tobous.collegedroid.gui.mainScreen.fragment.schedule.CellRelativeLayout>

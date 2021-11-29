@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_background"
+    >
+
+    <TextView
+        android:id="@+id/schedule_list_title"
+        android:text="@string/title_schedule_list"
+        style="@style/DialogTitle"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/schedule_action_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/schedule_list_title"
+        android:layout_above="@+id/schedule_action_list_layout_button_box"
+        />
+
+    <LinearLayout
+        android:id="@+id/schedule_action_list_layout_button_box"
+        style="@style/DialogLayoutButton"
+        >
+
+        <Button
+            android:id="@+id/schedule_action_list_button_add_action"
+            android:text="@string/btn_add_schedule_action"
+            android:layout_weight="0.5"
+            style="@style/DialogButton"/>
+
+        <Button
+            android:id="@+id/schedule_action_list_button_ok"
+            android:text="@string/btn_ok"
+            android:layout_weight="0.5"
+            style="@style/DialogButton"/>
+    </LinearLayout>
+
+</RelativeLayout>
